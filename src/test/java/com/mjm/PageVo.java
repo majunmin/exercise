@@ -89,15 +89,9 @@ public class PageVo {
     private String content;
 
     /**
-     * 描述
-     */
-    @PageFieldSelect(cssQuery = "#Zoom > span > p:nth-child(1) > img:nth-child(3)")
-    private String description;
-
-    /**
      * 海报
      */
-    @PageFieldSelect(cssQuery = "#Zoom > span > p:nth-child(1) > img:nth-child(3)",
+    @PageFieldSelect(cssQuery = "#Zoom > span > p:nth-child(1) > img:first-of-type",
             selectType = XxlCrawlerConf.SelectType.ATTR, selectVal = "abs:src")
     private String posterUrl;
 
@@ -107,14 +101,5 @@ public class PageVo {
     @PageFieldSelect(cssQuery = "#Zoom > span > table > tbody > tr > td > a",
     selectType = XxlCrawlerConf.SelectType.TEXT)
     private String ftpLink;
-
-    /**
-     * 迅雷下载链接
-     */
-    @PageFieldSelect(cssQuery = "#Zoom > span > table > tbody > tr > td > a",
-            selectType = XxlCrawlerConf.SelectType.ATTR, selectVal = "href")
-    private String thunderLink;
-
-
 
 }

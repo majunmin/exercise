@@ -66,6 +66,7 @@ public class AppTest
                         // 解析封装 PageVo 对象
                         String pageUrl = html.baseUri();
                         System.out.println(pageUrl + ":" + pageVo.toString());
+                        pageVo.getContent().split("◎");
                     }
                 })
                 .build();
