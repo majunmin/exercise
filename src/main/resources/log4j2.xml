@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+自动重新配置 monitorInterval="30"
+
+-->
+<Configuration status="WARN" monitorInterval="30">
+
+    <Properties>
+        <Property name="LOG_FORMAT">%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</Property>
+    </Properties>
+    <Appenders>
+        <!--输出到控制台-->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${LOG_FORMAT}"/>
+        </Console>
+        <!--输出到文件-->
+        <File name="file1" fileName="output1.log" advertiseURI="file://Users/majunmin/IdeaProjects/exercise/src/main/resources/output.log" advertise="true">
+
+        </File>
+
+
+    </Appenders>
+    <Loggers>
+        <Root level="error">
+            <AppenderRef ref="Console"/>
+        </Root>
+        <Logger name="com.mjm.log4j" level="trace" additivity="false">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="file1" />
+        </Logger>
+    </Loggers>
+</Configuration>
