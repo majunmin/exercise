@@ -1,4 +1,4 @@
-package com.mjm.future;
+package com.mjm.java8.future;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
